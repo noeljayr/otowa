@@ -28,7 +28,7 @@ html {
 }
 
 :root {
-  --black: #2C2C2C;
+  --black: #2c2c2c;
   --white: #f5fffa;
   --primary: #6d67fe;
   --border: #f0f0f0;
@@ -192,16 +192,16 @@ ul li {
   user-select: none;
   text-align: center;
   width: fit-content;
-  font-weight: 500;
+  font-weight: 600;
   user-select: none;
   outline: none;
   font-family: "Inter", sans-serif;
   background-color: var(--primary);
   height: 1.75rem;
   gap: 0.25rem;
+  font-size: calc(0.95 * var(--p2));
   line-height: 0;
-  font-size: var(--p3);
-  border: 1px solid #261AC6;
+  border: 1px solid rgb(0, 0, 0, 0.15);
   box-shadow: inset -3px 0px 1px rgba(255, 255, 255, 0.2),
     inset 3px 0px 1px rgba(255, 255, 255, 0.2),
     inset 0px 3px 1px rgba(255, 255, 255, 0.2);
@@ -262,4 +262,12 @@ button:hover {
 .news-content,
 .news-content * {
   line-height: 180% !important;
+}
+
+.hero h1 span{
+  background: linear-gradient(90deg, #6d67fe 0%, #5c3e98 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }

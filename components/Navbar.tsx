@@ -9,12 +9,12 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <div className="fixed w-screen top-0 left-0 px-10 py-6 flex items-center justify-center">
+    <div className="fixed w-screen bg-[#F2F2F2] z-50 top-0 left-0 px-10 py-6 flex items-center justify-center">
       <Link href={"/"} className="font-semibold font-h4  ">
         Otowa
       </Link>
 
-      <div className="flex items-center max-[720px]:hidden absolute space-x-4">
+      <div className="flex items-center max-[720px]:hidden absolute space-x-6">
         <Link className="font-medium" href={"/"}>
           Home
         </Link>
@@ -32,7 +32,7 @@ function Navbar() {
 
       <div className="flex items-center gap-4 ml-auto">
         <Link className="font-semibold max-[720px]:hidden" href={"#"}>
-          Login
+          Contact sales
         </Link>
 
         <Link href={"/contact"} className="cta">
@@ -43,9 +43,11 @@ function Navbar() {
           />
         </Link>
 
-        <button className="cta-2 ml-auto min-[720px]:hidden">
-          <IconMenu />
-        </button>
+        <div className="min-[720px]:hidden">
+          <button className="cta-2 ml-auto">
+            <IconMenu />
+          </button>
+        </div>
       </div>
     </div>
   );
