@@ -9,7 +9,7 @@ function Hero() {
   return (
     <div className="w-full flex max-[900px]:flex-col hero items-center max-[900px]:items-start relative justify-center z-0 bg-[#F2F2F2] py-16 px-10 border-b border-dashed border-b-[#D4D4D4]">
       <div className="flex flex-col space-y-2 max-[900px]:items-center max-[900px]:py-24">
-        <span className=" font-medium bg-white px-2 w-fit py-1 rounded-full border border-[#4D4D4D]/15">
+        <span className="font-p3 font-medium bg-white px-2 w-fit py-1 rounded-full border border-[#4D4D4D]/15">
           Malawi’s AI Infrastructure Specialists
         </span>
         <div className="flex flex-col ">
@@ -57,7 +57,7 @@ function Hero() {
                 fill="var(--primary)"
               ></path>
             </svg>
-            <span className="font-medium">Integrate in seconds</span>
+            <span className="font-medium font-p3">Integrate in seconds</span>
           </div>
           <div className="flex items-center">
             <svg
@@ -77,7 +77,7 @@ function Hero() {
                 fill="var(--primary)"
               ></path>
             </svg>
-            <span className="font-medium">No forex required</span>
+            <span className="font-medium font-p3">No forex required</span>
           </div>
           <div className="flex items-center">
             <svg
@@ -97,12 +97,12 @@ function Hero() {
                 fill="var(--primary)"
               ></path>
             </svg>
-            <span className="font-medium">Localized AI models</span>
+            <span className="font-medium font-p3">Localized AI models</span>
           </div>
         </div>
       </div>
 
-      <button className="absolute h-8 max-[900px]:self-center -bottom-4 bg-[#FAFFFB] border border-[#B2FFC8] px-3 rounded-full text-[#3A7D66] flex items-center">
+      <button className="absolute font-p3 h-8 max-[900px]:self-center -bottom-4 bg-[#FAFFFB] border border-[#B2FFC8] px-3 rounded-full text-[#3A7D66] flex items-center">
         <span className="mr-1.5 h-1.5 w-1.5 rounded-full bg-[#09DE48]"></span>
         12 Active AI models
       </button>
