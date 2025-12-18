@@ -104,7 +104,7 @@ function Hero() {
 
       <button className="absolute font-p3 h-8 max-[900px]:self-center -bottom-4 bg-[#FAFFFB] border border-[#B2FFC8] px-3 rounded-full text-[#3A7D66] flex items-center">
         <span className="mr-1.5 h-1.5 w-1.5 rounded-full bg-[#09DE48]"></span>
-        12 Active AI models
+        5 Active AI models
       </button>
     </div>
   );

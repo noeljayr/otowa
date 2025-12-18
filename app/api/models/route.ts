@@ -8,7 +8,7 @@ export async function GET() {
         name: "ChatGPT-4o",
         version: "v1.2",
         provider: "OpenAI",
-        logo: "/public/chatgpt.png",
+        logo: "/chatgpt.png",
         best_for: "Best for less complex tasks, like writing.",
       },
       {
@@ -16,7 +16,7 @@ export async function GET() {
         name: "Claude 3.5 Sonnet",
         version: "v3.5",
         provider: "Anthropic",
-        logo: "/public/claude.png",
+        logo: "/claude.png",
         best_for: "Coding and software development tasks",
       },
       {
@@ -24,7 +24,7 @@ export async function GET() {
         name: "Gemini 3 Pro",
         version: "v3",
         provider: "Google",
-        logo: "/public/gemini.png",
+        logo: "/gemini.png",
         best_for: "Image generation and coding",
       },
       {
@@ -32,7 +32,7 @@ export async function GET() {
         name: "DeepSeek",
         version: "v3.2",
         provider: "DeepSeek",
-        logo: "/public/deepseek.png",
+        logo: "/deepseek.png",
         best_for:
           "Excels at technical and logic-intensive tasks such as coding and mathematics",
       },
@@ -41,7 +41,7 @@ export async function GET() {
         name: "Llama 3",
         version: "v3",
         provider: "Meta",
-        logo: "/public/llama.png",
+        logo: "/llama.png",
         best_for: "General language understanding, creative content generation",
       },
     ],
