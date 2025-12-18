@@ -7,7 +7,7 @@ import IconClock from "../Icons/IconClock";
 
 function Hero() {
   return (
-    <div className="w-full flex max-[900px]:flex-col hero items-center max-[900px]:items-start relative justify-center z-0 bg-[#F2F2F2] py-16 px-10 border-b border-dashed border-b-[#D4D4D4]">
+    <div className="w-full flex max-[900px]:flex-col hero items-center max-[900px]:items-start relative justify-center z-0 bg-[#F2F2F2] py-16 px-10 max-sm:px-4 border-b border-dashed border-b-[#D4D4D4]">
       <div className="flex flex-col space-y-2 max-[900px]:items-center max-[900px]:py-24">
         <span className="font-p3 font-medium bg-white px-2 w-fit py-1 rounded-full border border-[#4D4D4D]/15">
           Malawi’s AI Infrastructure Specialists
@@ -48,7 +48,7 @@ function Hero() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               color="var(--primary)"
-              stroke-width="1.5"
+              strokeWidth="1.5"
             >
               <path
                 fillRule="evenodd"
@@ -65,7 +65,7 @@ function Hero() {
               height="16px"
               className="mr-1.5"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               color="var(--primary)"

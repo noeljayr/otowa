@@ -9,7 +9,7 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <div className="fixed w-screen bg-[#F2F2F2] z-50 top-0 left-0 px-10 py-6 flex items-center justify-center">
+    <div className="fixed w-screen bg-[#F2F2F2] z-50 top-0 left-0 px-10 max-sm:px-4 py-6 flex items-center justify-center">
       <Link href={"/"} className="font-semibold font-h4  ">
         Otowa
       </Link>
