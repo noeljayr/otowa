@@ -25,17 +25,15 @@ function Navbar() {
           <span>Company</span>
           <IconChevronDown className="h-4 w-4 opacity-75" />
         </Link>
-        <Link className="font-medium" href={"/"}>
-          Contact
-        </Link>
+       
       </div>
 
       <div className="flex items-center gap-4 ml-auto">
-        <Link className="font-semibold max-[720px]:hidden" href={"#"}>
+        <Link className="font-semibold max-[720px]:hidden" href={"/contact"}>
           Contact sales
         </Link>
 
-        <Link href={"/contact"} className="cta">
+        <Link target="_blank" href="mailto:onboarding@otowa.ai" className="cta">
           Get started
           <IconChevronRight
             color="var(--white)"
