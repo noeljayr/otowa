@@ -1,21 +1,22 @@
 "use client";
 
-import { IconChevronLeft } from "@tabler/icons-react";
+import { IconChevronLeft, IconClockHour2, IconCopy } from "@tabler/icons-react";
 import Link from "next/link";
 import paychanguLogo from "@/public/paychangu.png";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { plans } from "@/data/pricing";
 import { formatAmountWithCommas } from "@/utils/formatNumber";
 import PaymentMethods from "@/components/PaymentMethods";
 
-function page() {
+function CheckoutContent() {
   const searchParams = useSearchParams();
   const plan = searchParams.get("plan");
   const [selectedPlan, setSelectedPlan] = useState<String | null>(null);
   const [price, setPrice] = useState(0);
   const [selectedOption, setSelectedOption] = useState("monthly");
+  const [method, setMethod] = useState("tnm");
 
   useEffect(() => {
     if (!plan) return;
@@ -97,8 +98,8 @@ function page() {
         </div>
       </div>
 
-      <div className="h-full w-full border-l border-l-[#E7E7E7] bg-[#F9F8F7]/85 flex flex-col pt-24 max-[900px]:pt-4 px-10 max-sm:px-4">
-        <span className="flex h-4 w-4 opacity-0 invisible pointer-events-none items-center space-x-1"></span>
+      <div className="h-full w-full border-l border-l-[#E7E7E7] bg-[#F9F8F7]/85 flex flex-col pt-16 max-[900px]:pt-4 px-10 max-sm:px-4">
+        
         <div className="flex flex-col space-y-4 w-full pt-10 pr-10">
           <span className="opacity-50">Billing options</span>
 
@@ -152,16 +153,52 @@ function page() {
             </div>
           </div>
 
-          <PaymentMethods />
+          <PaymentMethods method={method} setPaymethod={setMethod} />
 
-          <div className="flex flex-col w-full space-y-1">
-            <span className="px-1">Phone </span>
-            <input
-              placeholder="e.g. 0881234567"
-              className="w-full focus-within:outline-2 focus-within:outline-(--primary)/10 outline-0 px-2 h-8 rounded-[0.35rem] border border-[#E7E7E7] bg-[#F9F8F7]/85"
-              type="text"
-            />
-          </div>
+          {method !== "bank" && (
+            <div className="flex flex-col w-full space-y-1">
+              <span className="px-1">Phone </span>
+              <input
+                placeholder={`e.g. ${
+                  method == "tnm" ? "0881234567" : "0991234567"
+                }`}
+                className="w-full focus-within:outline-2 focus-within:outline-(--primary)/10 outline-0 px-2 h-8 rounded-[0.35rem] border border-[#E7E7E7] bg-[#F9F8F7]/85"
+                type="text"
+              />
+            </div>
+          )}
+          {method == "bank" && (
+            <div className="flex flex-col relative space-y-1.5  p-2 cursor-pointer  border border-black/10 rounded-(--radius-s)">
+              <div className="flex items-center">
+                <span className="opacity-75">Acc number:</span>
+                <div className="flex items-center ml-auto">
+                  <span className=" cursor-pointer">2652455380</span>
+                  <IconCopy className="ml-1 h-4 w-4 opacity-50" />
+                </div>
+              </div>
+
+              <div className="flex items-center">
+                <span className="opacity-75">Acc name:</span>
+                <div className="flex items-center ml-auto">
+                  <span className=" cursor-pointer">PayChangu</span>
+                  <IconCopy className="ml-1 h-4 w-4 opacity-50" />
+                </div>
+              </div>
+
+              <div className="flex items-center">
+                <span className="opacity-75">Bank:</span>
+                <div className="flex items-center ml-auto">
+                  <span className=" cursor-pointer">Centenary Bank</span>
+                  <IconCopy className="ml-1 h-4 w-4 opacity-50" />
+                </div>
+              </div>
+
+              <span className="font-p3 opacity-75 flex items-center mx-auto">
+                <IconClockHour2 className="h-3 w-3 mr-1 opacity-50" />
+                Account expires in 45 mins
+              </span>
+            </div>
+          )}
 
           <button
             style={{
@@ -186,6 +223,14 @@ function page() {
         </div>
       </div>
     </div>
+  );
+}
+
+function page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CheckoutContent />
+    </Suspense>
   );
 }
 
