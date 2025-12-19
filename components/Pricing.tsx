@@ -4,48 +4,8 @@ import { IconCheck } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { useState } from "react";
-
-const plans = [
-  {
-    id: "basic",
-    name: "Basic",
-    price: "24,999",
-    billingPeriod: "month",
-    features: [
-      "5 models",
-      "500 weekly API calls",
-      "Monthly backups",
-      "100GB storage space",
-    ],
-  },
-  {
-    id: "professional",
-    name: "Professional",
-    price: "49,999",
-    billingPeriod: "month",
-    featured: true,
-    features: [
-      "Automation workflows",
-      "15 models",
-      "500GB cloud space",
-      "2K weekly API calls",
-      "Weekly backups",
-    ],
-  },
-  {
-    id: "enterprise",
-    name: "Enterprise",
-    price: "99,999",
-    billingPeriod: "month",
-    features: [
-      "MCP server integration",
-      "Unlimited API calls",
-      "Access to all models",
-      "Video generation models",
-      "Daily backups",
-    ],
-  },
-];
+import { plans } from "@/data/pricing";
+import { formatAmountWithCommas } from "@/utils/formatNumber";
 
 const deployment = [
   {
@@ -116,6 +76,7 @@ function Pricing() {
           >
             {plans.map((p) => (
               <div
+                key={p.id}
                 className={`flex max-[750px]:w-full rounded-(--radius-m) flex-col ${
                   p.featured ? "bg-black" : ""
                 } space-y-2 p-3`}
@@ -133,7 +94,7 @@ function Pricing() {
                       p.featured ? "text-white/75" : ""
                     } opacity-50 ml-auto`}
                   >
-                    K{p.price}/month
+                    K{formatAmountWithCommas(p.price.toFixed(0))}/month
                   </span>
                 </div>
 

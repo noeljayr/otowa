@@ -202,10 +202,12 @@ ul li {
   font-size: calc(0.95 * var(--p2));
   line-height: 0;
   border: 1px solid rgb(0, 0, 0, 0.15);
-  box-shadow: inset -3px 0px 1px rgba(255, 255, 255, 0.2),
-    inset 3px 0px 1px rgba(255, 255, 255, 0.2),
-    inset 0px 3px 1px rgba(255, 255, 255, 0.2);
+  box-shadow: inset -2px 0px 1px rgba(255, 255, 255, 0.2),
+    inset 2px 0px 1px rgba(255, 255, 255, 0.2),
+    inset 0px 2px 1px rgba(255, 255, 255, 0.2);
 }
+
+
 
 @media (width < 640px) {
   .cta,

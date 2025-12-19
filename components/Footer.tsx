@@ -1,12 +1,19 @@
+"use client"
+
 import {
   IconBrandFacebook,
   IconBrandInstagram,
   IconBrandX,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
 
 function Footer() {
+  const pathname = usePathname()
+
+  if(pathname.startsWith("/checkout")){
+    return <></>
+  }
   return (
     <div className="flex flex-col px-10 max-sm:px-4 py-8 mt-8 border-t border-t-(--border) space-y-5">
       <div className="w-full flex max-sm:flex-col max-sm:gap-10 justify-between">

@@ -6,8 +6,13 @@ import {
   IconMenu,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
+  const pathname = usePathname();
+  if (pathname.startsWith("/checkout")) {
+    return <></>;
+  }
   return (
     <div className="fixed w-screen bg-[#F2F2F2] z-50 top-0 left-0 px-10 max-sm:px-4 py-6 flex items-center justify-center">
       <Link href={"/"} className="font-semibold font-h4  ">
@@ -25,7 +30,6 @@ function Navbar() {
           <span>Company</span>
           <IconChevronDown className="h-4 w-4 opacity-75" />
         </Link>
-       
       </div>
 
       <div className="flex items-center gap-4 ml-auto">
@@ -33,7 +37,7 @@ function Navbar() {
           Contact sales
         </Link>
 
-        <Link target="_blank" href="mailto:onboarding@otowa.ai" className="cta">
+        <Link href="#pricing" className="cta">
           Get started
           <IconChevronRight
             color="var(--white)"
