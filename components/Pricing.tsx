@@ -170,7 +170,7 @@ function Pricing() {
                     d.featured ? "bg-white" : "border border-black/10"
                   } mt-auto font-semibold rounded-(--radius-ss)`}
                 >
-                  Get started
+                  Contact sales
                 </Link>
               </div>
             ))}
