@@ -33,7 +33,7 @@ function MobileNav() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={motionTransition()}
-            className="flex border-r border-r-black/10 fixed z-101 h-screen w-[75vw] bg-white right-0 top-0 flex-col p-4"
+            className="flex border-l border-l-black/10 fixed z-101 h-screen w-[75vw] bg-white right-0 top-0 flex-col p-4"
           >
             <div className="flex items-center w-full">
               <span className="font-semibold font-h4">Otowa</span>
@@ -49,10 +49,10 @@ function MobileNav() {
               <Link onClick={() => deleteUrlParam("mobile-navigation")} className="font-medium" href={"/"}>
                 Home
               </Link>
-              <Link onClick={() => deleteUrlParam("mobile-navigation")} className="font-medium" href={"/"}>
+              <Link onClick={() => deleteUrlParam("mobile-navigation")} className="font-medium" href={"/contact"}>
                 Contact 
               </Link>
-              <Link onClick={() => deleteUrlParam("mobile-navigation")} className="font-medium" href={"/"}>
+              <Link onClick={() => deleteUrlParam("mobile-navigation")} className="font-medium" href={"#"}>
                 Developers
               </Link>
             </div>
