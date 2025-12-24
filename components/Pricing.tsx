@@ -36,7 +36,7 @@ function Pricing() {
       </div>
 
       <div className=" items-center border w-52 grid grid-cols-2 bg-[#EDEDED] rounded-[0.45rem] border-[#D9D9D9] mx-auto">
-        <button
+        <span
           style={{
             transition: "ease 0.35s",
           }}
@@ -48,7 +48,7 @@ function Pricing() {
           }`}
         >
           Inferencing
-        </button>
+        </span>
         <button
           style={{
             transition: "ease 0.35s",
