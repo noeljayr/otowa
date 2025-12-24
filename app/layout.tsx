@@ -13,6 +13,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NextTopLoader from "nextjs-toploader";
 import MobileNav from "@/components/MobileNav";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Otowa AI",
@@ -29,7 +30,9 @@ export default function RootLayout({
       <body className={` antialiased`}>
         <NextTopLoader color="#6d67fe" showSpinner={false} />
         <Navbar />
-        <MobileNav />
+        <Suspense fallback={null}>
+          <MobileNav />
+        </Suspense>
         {children}
         <Footer />
       </body>
