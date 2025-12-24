@@ -49,7 +49,7 @@ function Navbar() {
         <div className="min-[720px]:hidden">
           <button
             onClick={() => setUrlParam("mobile-navigation", "true")}
-            className="p-1.5 rounded-[0.35rem] ml-auto bg-black/5 border border-black/10"
+            className="h-7 w-7 flex items-center justify-center rounded-[0.35rem] ml-auto bg-black/5 border border-black/10"
           >
             <IconMenu className="h-6 w-6" />
           </button>

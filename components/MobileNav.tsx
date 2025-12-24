@@ -33,13 +33,13 @@ function MobileNav() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={motionTransition()}
-            className="flex fixed z-101 h-screen w-[75vw] bg-white right-0 top-0 flex-col p-4"
+            className="flex border-r border-r-black/10 fixed z-101 h-screen w-[75vw] bg-white right-0 top-0 flex-col p-4"
           >
             <div className="flex items-center w-full">
               <span className="font-semibold font-h4">Otowa</span>
               <button
                 onClick={() => deleteUrlParam("mobile-navigation")}
-                className="flex items-center ml-auto p-1.5 bg-black/5 border border-black/10 rounded-[0.35rem]"
+                className="flex items-center justify-center ml-auto h-7 w-7 bg-black/5 border border-black/10 rounded-[0.35rem]"
               >
                 <IconX className="h-4 w-4" />
               </button>
