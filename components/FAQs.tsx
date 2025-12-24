@@ -1,5 +1,6 @@
 "use client";
 
+import { motionTransition } from "@/utils/motion-transition";
 import { IconChevronDown } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
@@ -82,6 +83,7 @@ function FAQs() {
                   setActiveQuestion(q);
                 }
               }}
+              transition={motionTransition()}
               className="flex flex-col  py-3 first:pt-0 last:pb-0 last:border-0 border-b border-b-(--border) "
             >
               <div className="w-full gap-2  cursor-pointer grid grid-cols-[1fr_auto]">
@@ -97,7 +99,11 @@ function FAQs() {
               </div>
 
               {q.id == activeQuestion?.id && (
-                <motion.p layout="position" className="opacity-75 font-normal mt-0.5">
+                <motion.p
+                  transition={motionTransition()}
+                  layout="position"
+                  className="opacity-75 font-normal mt-0.5"
+                >
                   {q.answer}
                 </motion.p>
               )}

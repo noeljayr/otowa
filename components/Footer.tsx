@@ -15,7 +15,7 @@ function Footer() {
     return <></>
   }
   return (
-    <div className="flex flex-col px-10 max-sm:px-4 py-8 mt-8 border-t border-t-(--border) space-y-5">
+    <div className="flex flex-col px-10 max-sm:px-4 min-[1440px]:px-[14vw] py-8 mt-8 border-t border-t-(--border) space-y-5">
       <div className="w-full flex max-sm:flex-col max-sm:gap-10 justify-between">
         <div className="flex flex-col">
           <h3>Otowa</h3>

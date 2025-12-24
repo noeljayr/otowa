@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Offers() {
   return (
-    <div className="flex flex-col px-10 max-sm:px-4 py-10 space-y-10">
+    <div className="flex flex-col px-10 min-[1440px]:px-[14vw] max-sm:px-4 py-10 space-y-10">
       <div className="flex flex-col items-center">
         <h3>What we offer</h3>
         <p className="opacity-75 w-[54ch] text-center max-sm:w-full">

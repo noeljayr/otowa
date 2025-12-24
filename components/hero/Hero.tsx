@@ -1,23 +1,23 @@
-import heroImage from "@/public/hero-image.png";
 import { IconChevronRight } from "@tabler/icons-react";
-import Image from "next/image";
 import Link from "next/link";
 import HeroImage from "./HeroImage";
-import IconClock from "../Icons/IconClock";
 import ActiveModels from "./ActiveModels";
 
 function Hero() {
   return (
-    <div className="w-full flex max-[900px]:flex-col hero items-center max-[900px]:items-start relative justify-center z-0 bg-[#F2F2F2] py-16 px-10 max-sm:px-4 border-b border-dashed border-b-[#D4D4D4]">
+    <div className="w-full flex max-[900px]:flex-col hero items-center max-[900px]:items-start relative justify-center z-0 bg-[#F2F2F2] py-16 px-10 min-[1440px]:px-[14vw]  max-sm:px-4 border-b border-dashed border-b-[#D4D4D4]">
       <div className="flex flex-col space-y-2 max-[900px]:items-center max-[900px]:py-24">
         <span className="font-p3 font-medium bg-white px-2 w-fit py-1 rounded-full border border-[#4D4D4D]/15">
           Malawi’s AI Infrastructure Specialists
         </span>
         <div className="flex flex-col ">
-          <h1 style={{ lineHeight: "160%" }} className="w-[17ch]  max-[900px]:text-center max-[900px]:w-full">
+          <h1
+            style={{ lineHeight: "160%" }}
+            className="w-[17ch]  max-[900px]:text-center max-[900px]:w-full"
+          >
             Take advantage of the power of <span>AI.</span>
           </h1>
-          <p className="w-60 max-[900px]:w-full max-[900px]:text-center opacity-75">
+          <p className="w-60  max-[900px]:w-full max-[900px]:text-center opacity-75">
             We are here to help you fully integrate and deploy AI into your
             business workflow to stay ahead of the competition
           </p>

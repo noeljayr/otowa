@@ -12,6 +12,7 @@ import "@fontsource/inter/900.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NextTopLoader from "nextjs-toploader";
+import MobileNav from "@/components/MobileNav";
 
 export const metadata: Metadata = {
   title: "Otowa AI",
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className={` antialiased`}>
         <NextTopLoader color="#6d67fe" showSpinner={false} />
         <Navbar />
+        <MobileNav />
         {children}
         <Footer />
       </body>

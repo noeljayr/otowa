@@ -9,7 +9,7 @@ import Link from "next/link";
 
 function page() {
   return (
-    <div className="flex flex-col pt-36 pb-10 px-10 max-sm:px-4">
+    <div className="flex flex-col pt-36 pb-10 px-10 min-[1440px]:px-[14vw] max-sm:px-4">
       <div className="flex flex-col">
         <h3>Contact us</h3>
         <p className="opacity-75 w-[54ch] max-sm:w-[65%]">

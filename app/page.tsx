@@ -14,7 +14,7 @@ export default function Home() {
       <ModelsTable />
       <Pricing />
       <FAQs />
-      <div className="flex flex-col px-10 max-sm:px-4 py-10 pt-5 items-center">
+      <div className="flex flex-col px-10 min-[1440px]:px-[25vw] max-sm:px-4 py-10 pt-5 items-center">
         <h3>Ready to build the future of AI in Malawi?</h3>
         <p className="opacity-75 w-[54ch] text-center max-sm:w-full">
           Join thousands of developers, researchers, and companies building
