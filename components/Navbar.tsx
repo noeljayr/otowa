@@ -51,7 +51,7 @@ function Navbar() {
             onClick={() => setUrlParam("mobile-navigation", "true")}
             className="h-7 w-7 flex items-center justify-center rounded-[0.35rem] ml-auto bg-black/5 border border-black/10"
           >
-            <IconMenu className="h-6 w-6" />
+            <IconMenu className="h-4 w-4" />
           </button>
         </div>
       </div>
